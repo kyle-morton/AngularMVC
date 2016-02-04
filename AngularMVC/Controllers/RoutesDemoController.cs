@@ -15,9 +15,15 @@ namespace AngularMVC.Controllers
             return View();
         }
 
-        public ActionResult Two()
+        //public ActionResult Two()
+        //{
+        //    Debug.WriteLine("Route Two...");
+        //    return View();
+        //}
+
+        public ActionResult Two(int donuts = 1)
         {
-            Debug.WriteLine("Route Two...");
+            ViewBag.Donuts = donuts;
             return View();
         }
 

@@ -4,14 +4,15 @@ var AngularMVC = angular.module('AngularMVC', ['ngRoute']);
 //initialize controller
 AngularMVC.controller('LandingPageController', LandingPageController);
 
-//configure routes for app
+//configure routes for app (retrieve views, etc from backend routes)
 var configFunction = function ($routeProvider) {
     $routeProvider
         .when('/routeOne', {
             templateUrl: 'routesDemo/one'
         })
-        .when('/routeTwo', {
-            templateUrl: 'routesDemo/two'
+        .when('/routeTwo/:donuts', {
+            //templateUrl: 'routesDemo/two'
+            templateUrl: function (params) { return '/routesDemo/two?donuts=' + params.donuts;}
         })
         .when('/routeThree', {
             templateUrl: 'routesDemo/three'
