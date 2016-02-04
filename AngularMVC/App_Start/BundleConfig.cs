@@ -18,6 +18,7 @@ namespace AngularMVC
             //AngularMVC.js file, minifies all
             bundles.Add(new ScriptBundle("~/bundles/AngularMVC")
             .IncludeDirectory("~/Scripts/Controllers", "*.js")
+            .IncludeDirectory("~/Scripts/Factories", "*.js")
             .Include("~/Scripts/AngularMVC.js"));
 
             BundleTable.EnableOptimizations = true;

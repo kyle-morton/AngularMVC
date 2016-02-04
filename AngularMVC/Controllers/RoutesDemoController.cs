@@ -24,9 +24,12 @@ namespace AngularMVC.Controllers
         public ActionResult Two(int donuts = 1)
         {
             ViewBag.Donuts = donuts;
+            Debug.WriteLine("Route Two...");
             return View();
         }
 
+        //this view requires prior authentication
+        [Authorize]
         public ActionResult Three()
         {
             Debug.WriteLine("Route Three...");

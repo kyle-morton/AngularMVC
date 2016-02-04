@@ -1,26 +1,33 @@
-﻿//create app module
-var AngularMVC = angular.module('AngularMVC', ['ngRoute']);
+﻿var AngularMVC = angular.module('AngularMVC', ['ngRoute']);
 
-//initialize controller
 AngularMVC.controller('LandingPageController', LandingPageController);
+AngularMVC.controller('LoginController', LoginController);
+AngularMVC.controller('RegisterController', RegisterController);
 
-//configure routes for app (retrieve views, etc from backend routes)
-var configFunction = function ($routeProvider) {
-    $routeProvider
-        .when('/routeOne', {
+AngularMVC.factory('AuthHttpResponseInterceptor', AuthHttpResponseInterceptor);
+
+var configFunction = function ($routeProvider, $httpProvider) {
+    $routeProvider.
+        when('/routeOne', {
             templateUrl: 'routesDemo/one'
         })
         .when('/routeTwo/:donuts', {
-            //templateUrl: 'routesDemo/two'
-            templateUrl: function (params) { return '/routesDemo/two?donuts=' + params.donuts;}
+            templateUrl: function (params) { return '/routesDemo/two?donuts=' + params.donuts; }
         })
         .when('/routeThree', {
             templateUrl: 'routesDemo/three'
+        })
+        .when('/login', {
+            templateUrl: '/Account/Login',
+            controller: LoginController
+        })
+        .when('/register', {
+            templateUrl: '/Account/Register',
+            controller: RegisterController
         });
-};
 
-//inject routeProvider into configFunction so it may be used (Dep Injection)
-configFunction.$inject = ['$routeProvider'];
+    $httpProvider.interceptors.push('AuthHttpResponseInterceptor');
+}
+configFunction.$inject = ['$routeProvider', '$httpProvider'];
 
-//Apply configuration to angular app
 AngularMVC.config(configFunction);
