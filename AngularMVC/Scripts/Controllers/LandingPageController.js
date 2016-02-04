@@ -1,8 +1,8 @@
 ﻿var LandingPageController = function ($scope) {
     $scope.models = {
-        helloAngular: 'I work!'
+        helloAngular: 'Angular JS'
     };
-}
+};
 
 //inject inject scope object into controller
 LandingPageController.$inject = ['$scope'];

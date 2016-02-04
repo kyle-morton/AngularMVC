@@ -7,7 +7,15 @@
     <input type="text" ng-model="models.helloAngular" />
     <h1>{{models.helloAngular}}</h1>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <ul>
+        <li><a href="/#/routeOne">Route One</a></li>
+        <li><a href="/#/routeTwo">Route Two</a></li>
+        <li><a href="/#/routeThree">Route Three</a></li>
+    </ul>
+
+    <div ng-view></div>
+
+    @Scripts.Render("~/bundles/Angular")
     @Scripts.Render("~/bundles/AngularMVC")
 </body>
 </html>

@@ -1,0 +1,7 @@
+﻿{
+  "version": "2.2.0",
+  "ignore": [
+    "\\Scripts\\AngularMVC.js"
+  ],
+  "globalVariables": []
+}
