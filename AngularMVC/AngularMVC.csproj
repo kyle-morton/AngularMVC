@@ -171,7 +171,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\Controllers\AngularMVC.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <None Include="Scripts\angular.intellisense.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\AngularMVC.js" />
     <Content Include="Scripts\Controllers\LandingPageController.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -190,6 +194,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+    <Content Include="Scripts\angular.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
