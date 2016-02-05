@@ -54,3 +54,21 @@ DEBUG 2016-02-05 10:28:47,952 19220ms Log                    debug              
 Password = Kmorton1
 ConfirmPassword = Kmorton1
 
+DEBUG 2016-02-05 16:49:50,695 38528ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+DEBUG 2016-02-05 16:54:08,371 13812ms Log                    debug              - Model for Register: Email = kmorton@wehco.com
+Password = Kmorton1
+ConfirmPassword = Kmroton1
+
+DEBUG 2016-02-05 16:55:35,007 11805ms Log                    debug              - Model for Register: Email = kmorton@wehco.com
+Password = Kmorton1
+ConfirmPassword = Kmorton1
+
+DEBUG 2016-02-05 16:55:35,103 11901ms Log                    debug              - Register result: False
+DEBUG 2016-02-05 16:57:50,240 147037ms Log                    debug              - Model for Register: Email = kmorton@wehco.com
+Password = Kmorton1
+ConfirmPassword = Kmorton1
+
+DEBUG 2016-02-05 16:57:50,241 147038ms Log                    debug              - Register result: False

@@ -95,11 +95,24 @@ namespace AngularMVC.Controllers
         public async Task<bool> Register(RegisterViewModel model)
         {
             Log.debug("Model for Register: " + model);
-            var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-            var result = await UserManager.CreateAsync(user, model.Password);
-            if (!result.Succeeded) return false;
-            await SignInManager.SignInAsync(user, false, false);
-            return true;
+            var registerResult = false;
+            try
+            {
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var result = await UserManager.CreateAsync(user, model.Password);
+                if (!result.Succeeded) 
+                    registerResult = false;
+                else
+                    await SignInManager.SignInAsync(user, false, false);
+            }
+            catch (Exception ex)
+            {
+                Log.error("Exception: " + ex);
+            }
+
+            Log.debug("Register result: " + registerResult);
+
+            return registerResult;
         }
 
         #endregion
