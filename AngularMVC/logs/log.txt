@@ -31,3 +31,26 @@ Password = Kmorton1
 RememberMe = False
 
 DEBUG 2016-02-05 10:11:06,701 20024ms Log                    debug              - Sign In Result: False
+DEBUG 2016-02-05 10:14:54,628 25218ms Log                    debug              - Model for Register: Email = kmorton@wehco.com
+Password = Kmorton1
+ConfirmPassword = Kmorton1
+
+DEBUG 2016-02-05 10:15:04,779 35369ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+DEBUG 2016-02-05 10:15:07,579 38169ms Log                    debug              - Sign In Result: False
+DEBUG 2016-02-05 10:15:20,360 50950ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+DEBUG 2016-02-05 10:15:20,369 50959ms Log                    debug              - Sign In Result: False
+DEBUG 2016-02-05 10:19:07,016 277606ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+DEBUG 2016-02-05 10:19:07,027 277617ms Log                    debug              - Sign In Result: False
+DEBUG 2016-02-05 10:28:47,952 19220ms Log                    debug              - Model for Register: Email = kmorton@wehco.com
+Password = Kmorton1
+ConfirmPassword = Kmorton1
+
