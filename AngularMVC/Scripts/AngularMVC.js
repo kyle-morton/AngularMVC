@@ -5,6 +5,7 @@ AngularMVC.controller('LoginController', LoginController);
 AngularMVC.controller('RegisterController', RegisterController);
 
 AngularMVC.factory('AuthHttpResponseInterceptor', AuthHttpResponseInterceptor);
+AngularMVC.factory('LoginFactory', LoginFactory);
 
 var configFunction = function ($routeProvider, $httpProvider) {
     $routeProvider.

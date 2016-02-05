@@ -6,7 +6,11 @@
     <input type="password" id="password" ng-model="loginForm.password" required />
 
     <label for="rememberMe">Remember Me:</label>
-    <input type="checkbox" id="rememberMe" ng-model="loginForm.rememberMe" required />
+    <input type="checkbox" id="rememberMe" ng-model="loginForm.rememberMe" />
 
     <button type="submit">Login</button>
 </form>
+
+<div ng-if="loginForm.loginFailure">
+    Error
+</div>

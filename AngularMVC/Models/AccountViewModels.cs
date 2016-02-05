@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace AngularMVC.Models
 {
@@ -30,9 +31,13 @@ namespace AngularMVC.Models
 
     public class LoginViewModel
     {
+        //[Required]
+        //[Display(Name = "User name")]
+        //public string UserName { get; set; }
+
         [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
+        [Display(Name = "Email")]
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -41,13 +46,26 @@ namespace AngularMVC.Models
 
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
+
+        override public string ToString()
+        {
+            string str = String.Empty;
+            str = String.Concat(str, "Email = ", Email, "\r\n");
+            str = String.Concat(str, "Password = ", Password, "\r\n");
+            str = String.Concat(str, "RememberMe = ", RememberMe, "\r\n");
+            return str;
+        }
     }
 
     public class RegisterViewModel
     {
+        //[Required]
+        //[Display(Name = "User name")]
+        //public string UserName { get; set; }
+
         [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
+        [Display(Name = "Email")]
+        public string Email { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -59,5 +77,15 @@ namespace AngularMVC.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        override public string ToString()
+        {
+            string str = String.Empty;
+            str = String.Concat(str, "Email = ", Email, "\r\n");
+            str = String.Concat(str, "Password = ", Password, "\r\n");
+            str = String.Concat(str, "ConfirmPassword = ", ConfirmPassword, "\r\n");
+            return str;
+        }
+
     }
 }

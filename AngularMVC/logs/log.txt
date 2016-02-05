@@ -1,0 +1,33 @@
+DEBUG 2016-02-05 09:19:39,640 10686ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+DEBUG 2016-02-05 09:32:57,808  7060ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+ERROR 2016-02-05 09:32:57,891  7143ms Log                    error              - Exception: System.NullReferenceException: Object reference not set to an instance of an object.
+   at AngularMVC.Controllers.AccountController.<Login>d__0.MoveNext() in c:\Users\kmorton.WEHCO\Documents\Visual Studio 2013\Projects\AngularMVC\AngularMVC\Controllers\AccountController.cs:line 70
+ERROR 2016-02-05 09:48:59,112   402ms Log                    error              - Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: context
+   at Microsoft.AspNet.Identity.EntityFramework.UserStore`6..ctor(DbContext context)
+   at Microsoft.AspNet.Identity.EntityFramework.UserStore`1..ctor(DbContext context)
+   at AngularMVC.App_Start.IdentityConfig.ApplicationUserManager.Create(IdentityFactoryOptions`1 options, IOwinContext context) in c:\Users\kmorton.WEHCO\Documents\Visual Studio 2013\Projects\AngularMVC\AngularMVC\App_Start\IdentityConfig.cs:line 52
+DEBUG 2016-02-05 09:58:31,150  9217ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+DEBUG 2016-02-05 09:58:41,919 19986ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+DEBUG 2016-02-05 10:09:49,456 39280ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+DEBUG 2016-02-05 10:09:55,431 45255ms Log                    debug              - RESULT: Failure
+DEBUG 2016-02-05 10:11:03,805 17128ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1
+RememberMe = False
+
+DEBUG 2016-02-05 10:11:06,701 20024ms Log                    debug              - Sign In Result: False
