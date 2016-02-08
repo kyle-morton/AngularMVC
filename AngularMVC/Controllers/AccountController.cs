@@ -99,7 +99,9 @@ namespace AngularMVC.Controllers
             try
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                Log.debug("User: " + user.UserName + " " + user.Email);
                 var result = await UserManager.CreateAsync(user, model.Password);
+                Log.debug("Create User: " + result.Succeeded);
                 if (!result.Succeeded) 
                     registerResult = false;
                 else

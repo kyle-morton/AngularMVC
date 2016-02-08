@@ -4,23 +4,29 @@
     <title ng-bind="models.helloAngular"></title>
 </head>
 <body>
-    <input type="text" ng-model="models.helloAngular" />
+    <input type="text" ng-model="models.helloAngular" class="form-control" style="width:20%;" />
     <h1>{{models.helloAngular}}</h1>
 
-    <ul>
-        <li><a href="/#/routeOne">Route One</a></li>
-        <li><a href="/#/routeTwo/6">Route Two</a></li>
-        <li><a href="/#/routeThree">Route Three</a></li>
-    </ul>
+    <div class="well" style="width:20%;">
+        <ul>
+            <li><a href="/#/routeOne">Route One</a></li>
+            <li><a href="/#/routeTwo/4">Route Two</a></li>
+            <li><a href="/#/routeThree">Route Three</a></li>
+        </ul>
 
-    <ul>
-        <li><a href="/#/login">Login</a></li>
-        <li><a href="/#/register">Register</a></li>
-    </ul>
+        <ul>
+            <li><a href="/#/login">Login</a></li>
+            <li><a href="/#/register">Register</a></li>
+        </ul>
+    </div class="well" style="width:20%;">
 
     <div ng-view></div>
 
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Bootstrap/bootstrap")
     @Scripts.Render("~/bundles/Angular")
+    @Scripts.Render("~/bundles/Bootstrap")
     @Scripts.Render("~/bundles/AngularMVC")
+    
 </body>
 </html>

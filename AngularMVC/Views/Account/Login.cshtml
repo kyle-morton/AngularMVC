@@ -1,15 +1,19 @@
-﻿<form ng-submit="login()">
-    <label for="emailAddress">Email Address:</label>
-    <input type="text" ng-model="loginForm.emailAddress" id="emailAddress" required />
+﻿<div style="width: 50%;">
+    <form ng-submit="login()">
+        <label for="emailAddress">Email Address:</label>
+        <input type="text" ng-model="loginForm.emailAddress" id="emailAddress" required class="form-control" />
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" ng-model="loginForm.password" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" ng-model="loginForm.password" required class="form-control" />
 
-    <label for="rememberMe">Remember Me:</label>
-    <input type="checkbox" id="rememberMe" ng-model="loginForm.rememberMe" />
+        <label for="rememberMe">Remember Me:</label>
+        <input type="checkbox" id="rememberMe" ng-model="loginForm.rememberMe"/>
+        <br />
 
-    <button type="submit">Login</button>
-</form>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
 
 <div ng-if="loginForm.loginFailure">
     Error

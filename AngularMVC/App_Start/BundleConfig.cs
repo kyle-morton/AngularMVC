@@ -7,8 +7,11 @@ namespace AngularMVC
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                                  "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css")
+            .Include("~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Bootstrap/bootstrap")
+            .Include("~/Content/bootstrap/bootstrap.min.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/Angular")
             .Include("~/Scripts/Angular/angular.min.js",
@@ -20,6 +23,10 @@ namespace AngularMVC
             .IncludeDirectory("~/Scripts/Controllers", "*.js")
             .IncludeDirectory("~/Scripts/Factories", "*.js")
             .Include("~/Scripts/AngularMVC.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Bootstrap")
+            .Include("~/Scripts/jquery/jquery-1.9.1.min.js",
+            "~/Scripts/bootstrap/bootstrap.min.js"));
 
             BundleTable.EnableOptimizations = true;
         }
