@@ -25,7 +25,8 @@ var configFunction = function ($routeProvider, $httpProvider) {
         })
         .when('/register', {
             templateUrl: '/Account/Register',
-            controller: RegisterController
+            controller: RegisterController,
+            controllerAs: 'register'
         });
 
     $httpProvider.interceptors.push('AuthHttpResponseInterceptor');

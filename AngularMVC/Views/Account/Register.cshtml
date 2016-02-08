@@ -1,14 +1,20 @@
 ﻿<div style="width:50%;">
-    <form ng-submit="register()">
+    <form ng-submit="register.register()">
         <label for="emailAddress">Email Address:</label>
-        <input id="emailAddress" type="text" ng-model="registerForm.emailAddress" required class="form-control" />
+        <input id="emailAddress" type="text" ng-model="register.registerForm.emailAddress" required class="form-control" />
 
         <label for="password">Password:</label>
-        <input id="password" type="password" ng-model="registerForm.password" required class="form-control" />
+        <input id="password" type="password" ng-model="register.registerForm.password" required class="form-control" />
 
         <label for="confirmPassword">Confirm Password:</label>
-        <input id="confirmPassword" type="password" ng-model="registerForm.confirmPassword" required class="form-control" />
+        <input id="confirmPassword" type="password" ng-model="register.registerForm.confirmPassword" required class="form-control" />
 
+        <div ng-if="register.registrationFailure">
+            <strong style="color:red;">Error</strong>
+            <ul>
+                <li ng-repeat="e in register.errors" ng-if="register.error.length > 0" />
+            </ul>
+        </div>
         <br />
 
         <button type="submit">Register</button>
