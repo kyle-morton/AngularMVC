@@ -14,8 +14,12 @@ namespace AngularMVC
             .Include("~/Content/bootstrap/bootstrap.min.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/Angular")
-            .Include("~/Scripts/Angular/angular.min.js",
-            "~/Scripts/Angular/angular-route.min.js"));
+            .Include("~/Scripts/Angular/angular.min.js"));
+            //"~/Scripts/Angular/angular-route.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/AngularUI")
+            .Include("~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+            "~/Scripts/angular-ui/angular-ui-router.js"));
 
             //minify and compresses all js in controllers and adds to 
             //AngularMVC.js file, minifies all

@@ -5,27 +5,45 @@
     <base href="/" />
 </head>
 <body>
-    <input type="text" ng-model="models.helloAngular" class="form-control" style="width:20%;" />
-    <h1>{{models.helloAngular}}</h1>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" ng-click="navbarProperties.isCollapsed = !navbarProperties.isCollapsed">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Awesome Angular MVC APP</a>
+            </div>
+            <div class="navbar-collapse collapse" collapse="navbarProperties.isCollapsed">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="stateOne({ donuts: 12 })">State One</a></li>
+                    <li><a ui-sref="stateTwo">State Two</a></li>
+                    <li><a ui-sref="stateThree({ donuts: 4 })">State Three</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a ui-sref="loginRegister">Login / Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-    <div class="well" style="width:20%;">
-        <ul>
-            <li><a href="/routeOne">Route One</a></li>
-            <li><a href="/routeTwo/4">Route Two</a></li>
-            <li><a href="/routeThree">Route Three</a></li>
-        </ul>
+    <div class="container mainContent">
+        <div class="row">
+            <div class="col-md-6">
+                <div ui-view="containerOne"></div>
+            </div>
+            <div class="col-md-6">
+                <div ui-view="containerTwo"></div>
+            </div>
+        </div>
+    </div>
 
-        <ul>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/register">Register</a></li>
-        </ul>
-    </div class="well" style="width:20%;">
-
-    <div ng-view></div>
 
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/Bootstrap/bootstrap")
     @Scripts.Render("~/bundles/Angular")
+    @Scripts.Render("~/bundles/AngularUI")
     @Scripts.Render("~/bundles/Bootstrap")
     @Scripts.Render("~/bundles/AngularMVC")
     

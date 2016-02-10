@@ -95,3 +95,8 @@ ConfirmPassword = Kmorton1
 DEBUG 2016-02-08 11:51:33,794 56000ms Log                    debug              - User: kmorton@wehco.com kmorton@wehco.com
 DEBUG 2016-02-08 11:51:34,017 56223ms Log                    debug              - Create User: False
 DEBUG 2016-02-08 11:51:34,017 56223ms Log                    debug              - Register result: False
+DEBUG 2016-02-10 15:47:50,136 69052ms Log                    debug              - Model for Login: Email = kmorton@wehco.com
+Password = Kmorton1!
+RememberMe = False
+
+DEBUG 2016-02-10 15:47:54,321 73237ms Log                    debug              - Sign In Result: True
