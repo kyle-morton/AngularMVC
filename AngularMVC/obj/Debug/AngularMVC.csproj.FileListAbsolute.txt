@@ -55,3 +55,6 @@ C:\Users\kmorton.WEHCO\Documents\Visual Studio 2013\Projects\AngularMVC\AngularM
 C:\Users\kmorton.WEHCO\Documents\Visual Studio 2013\Projects\AngularMVC\AngularMVC\obj\Debug\AngularMVC.pdb
 C:\Users\kmorton.WEHCO\Documents\Visual Studio 2013\Projects\AngularMVC\AngularMVC\bin\log4net.dll
 C:\Users\kmorton.WEHCO\Documents\Visual Studio 2013\Projects\AngularMVC\AngularMVC\bin\log4net.xml
+C:\Users\kmorton.WEHCO\Documents\Visual Studio 2013\Projects\AngularMVC\AngularMVC\bin\Glimpse.AspNet.dll
+C:\Users\kmorton.WEHCO\Documents\Visual Studio 2013\Projects\AngularMVC\AngularMVC\bin\Glimpse.Core.dll
+C:\Users\kmorton.WEHCO\Documents\Visual Studio 2013\Projects\AngularMVC\AngularMVC\bin\Glimpse.Mvc5.dll
