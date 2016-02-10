@@ -29,10 +29,17 @@ namespace AngularMVC.Controllers
         }
 
         //this view requires prior authentication
-        [Authorize]
+        //[Authorize]
         public ActionResult Three()
         {
             Debug.WriteLine("Route Three...");
+            return View();
+        }
+
+
+        public ActionResult Four()
+        {
+            Debug.WriteLine("Route Four...");
             return View();
         }
 	}

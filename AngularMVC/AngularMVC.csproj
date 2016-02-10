@@ -1032,6 +1032,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Scripts\jquery\jquery-1.9.1.min.map" />
+    <Content Include="Views\RoutesDemo\Four.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
